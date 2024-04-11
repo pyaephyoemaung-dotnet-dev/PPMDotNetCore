@@ -1,11 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using PPMDotNetCore.ConsoleApp;
 using System.Data;
 using System.Data.SqlClient;
 
 Console.WriteLine("Hello, World!");
 
 //package for => nuget
-SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
+/*SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
 stringBuilder.DataSource = "Pyae02"; //server name
 stringBuilder.InitialCatalog = "PPMDotNetCore"; //database name
 stringBuilder.UserID = "sa"; //user name
@@ -34,4 +35,12 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("Blog Content => " + dr["BogContent"]);
     Console.WriteLine("--------------------------");
 }
-Console.ReadKey();
+Console.ReadKey();*/
+AdoDotNetTuto adoDotNetTuto = new AdoDotNetTuto();
+/*adoDotNetTuto.Read();
+adoDotNetTuto.Create("title", "author", "content");
+adoDotNetTuto.Update(3,"testing","author","content");
+adoDotNetTuto.Delete(3);*/
+adoDotNetTuto.Edit(2);
+adoDotNetTuto.Edit(1002);
+Console.ReadLine();
