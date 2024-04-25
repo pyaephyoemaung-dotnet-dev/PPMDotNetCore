@@ -2,8 +2,7 @@
 using PPMDotNetCore.ConsoleApp;
 using System.Data;
 using System.Data.SqlClient;
-
-Console.WriteLine("Hello, World!");
+//Console.WriteLine("Hello, World!");
 
 //package for => nuget
 /*SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
@@ -36,11 +35,13 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("--------------------------");
 }
 Console.ReadKey();*/
-AdoDotNetTuto adoDotNetTuto = new AdoDotNetTuto();
+//AdoDotNetTuto adoDotNetTuto = new AdoDotNetTuto();
 /*adoDotNetTuto.Read();
 adoDotNetTuto.Create("title", "author", "content");
 adoDotNetTuto.Update(3,"testing","author","content");
 adoDotNetTuto.Delete(3);*/
-adoDotNetTuto.Edit(2);
-adoDotNetTuto.Edit(1002);
+//adoDotNetTuto.Edit(2);
+//adoDotNetTuto.Edit(1002);
+DapperExample dapper = new DapperExample();
+dapper.Run();
 Console.ReadLine();

@@ -72,7 +72,7 @@ namespace PPMDotNetCore.ConsoleApp
             }
             DataRow dr = dt.Rows[0];
 
-            foreach (DataRow dr in dt.Rows)
+            foreach (DataRow dataRow in dt.Rows)
             {
                 Console.WriteLine("Blog Id => " + dr["BlogId"]);
                 Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
