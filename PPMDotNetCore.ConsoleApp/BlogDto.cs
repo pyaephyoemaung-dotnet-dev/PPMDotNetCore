@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPMDotNetCore.ConsoleApp
+namespace PPMDotNetCore.ConsoleApp;
+[Table("Tbl_Blog")]
+internal class BlogDto
 {
-    internal class BlogDto
-    {
-        public int BlogId { get; set; }
-        public string BlogTitle { get; set; }
-        public string BlogAuthor { get; set; }
-        public string BlogContent { get; set; }
-    } 
-    //public record BlogEntity(int BlogId, string BlogTitle, string BlogAuthor,string BlogContent);
-}
+    [Key]
+    public int BlogId { get; set; }
+    public string BlogTitle { get; set; }
+    public string BlogAuthor { get; set; }
+    public string BlogContent { get; set; }
+} 
+//public record BlogEntity(int BlogId, string BlogTitle, string BlogAuthor,string BlogContent);

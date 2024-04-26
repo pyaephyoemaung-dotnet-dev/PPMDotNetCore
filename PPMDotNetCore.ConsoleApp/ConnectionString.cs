@@ -14,7 +14,8 @@ namespace PPMDotNetCore.ConsoleApp
             DataSource = ".",
             InitialCatalog = "PPMDotNetCore",
             UserID = "sa",
-            Password = "sasa@123"
+            Password = "sasa@123",
+            TrustServerCertificate = true
         };
     }
 }

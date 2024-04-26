@@ -42,6 +42,8 @@ adoDotNetTuto.Update(3,"testing","author","content");
 adoDotNetTuto.Delete(3);*/
 //adoDotNetTuto.Edit(2);
 //adoDotNetTuto.Edit(1002);
-DapperExample dapper = new DapperExample();
-dapper.Run();
+//DapperExample dapper = new DapperExample();
+//dapper.Run();
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 Console.ReadLine();
