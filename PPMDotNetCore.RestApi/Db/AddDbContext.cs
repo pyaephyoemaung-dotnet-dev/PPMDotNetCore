@@ -1,11 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PPMDotNetCore.RestApi;
+using PPMDotNetCore.RestApi.Models;
 
-namespace PPMDotNetCore.ConsoleApp
+namespace PPMDotNetCore.RestApi.Db
 {
     internal class AddDbContext : DbContext
     {
@@ -13,6 +10,6 @@ namespace PPMDotNetCore.ConsoleApp
         {
             optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         }
-        public DbSet<BlogDto> Blogs { get; set; }
+        public DbSet<BlogsModel> Blogs { get; set; }
     }
 }

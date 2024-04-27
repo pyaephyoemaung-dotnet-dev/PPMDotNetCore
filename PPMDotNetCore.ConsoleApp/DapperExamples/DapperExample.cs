@@ -1,8 +1,10 @@
 ﻿using Dapper;
+using PPMDotNetCore.ConsoleApp.DtoBlogs;
+using PPMDotNetCore.ConsoleApp.Services;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PPMDotNetCore.ConsoleApp
+namespace PPMDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -43,11 +45,11 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-        private void Edit( int id)
+        private void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
             var item = db.Query("select * from tbl_blog where blogid = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;
@@ -67,7 +69,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-        private void Create(string title , string author , string content)
+        private void Create(string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -86,7 +88,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-           int result = db.Execute(query,item);
+            int result = db.Execute(query, item);
 
             string message = result > 0 ? "Saving success" : "Saving fail";
             Console.WriteLine(message);
@@ -100,7 +102,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-        private void Update(int id ,string title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {

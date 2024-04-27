@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Update.Internal;
+using PPMDotNetCore.ConsoleApp.DtoBlogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPMDotNetCore.ConsoleApp
+namespace PPMDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
@@ -23,7 +24,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-                                                            //Read
+        //Read
 
 
 
@@ -31,7 +32,7 @@ namespace PPMDotNetCore.ConsoleApp
 
         private void Read()
         {
-            
+
             var lst = adb.Blogs.ToList();
             foreach (BlogDto item in lst)
             {
@@ -46,7 +47,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-                                                            //Edit
+        //Edit
 
 
 
@@ -55,7 +56,7 @@ namespace PPMDotNetCore.ConsoleApp
         private void Edit(int id)
         {
             var item = adb.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data Found");
                 return;
@@ -69,7 +70,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-                                                                //Create
+        //Create
 
 
 
@@ -90,7 +91,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-                                                                    //Update
+        //Update
 
 
 
@@ -116,7 +117,7 @@ namespace PPMDotNetCore.ConsoleApp
 
 
 
-                                                                    //Delete
+        //Delete
 
 
 

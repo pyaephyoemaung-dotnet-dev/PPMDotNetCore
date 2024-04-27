@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 
-namespace PPMDotNetCore.ConsoleApp
+namespace PPMDotNetCore.ConsoleApp.AdoDotNetExample
 {
     internal class AdoDotNetTuto
     {
@@ -65,7 +65,7 @@ namespace PPMDotNetCore.ConsoleApp
             connection.Close();
             Console.WriteLine("Connection close.");
 
-            if(dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found.");
                 return;
@@ -94,12 +94,12 @@ namespace PPMDotNetCore.ConsoleApp
            (@BlogTitle
            ,@BlogAuthor
            ,@BogContent)";
-            SqlCommand cmd = new SqlCommand( query , connection);
+            SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BogContent", content);
             int result = cmd.ExecuteNonQuery();
-            
+
 
             connection.Close();
 

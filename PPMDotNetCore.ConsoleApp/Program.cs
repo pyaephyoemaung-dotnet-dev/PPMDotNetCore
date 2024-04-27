@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using PPMDotNetCore.ConsoleApp;
+using PPMDotNetCore.ConsoleApp.EFCoreExamples;
 using System.Data;
 using System.Data.SqlClient;
 //Console.WriteLine("Hello, World!");
