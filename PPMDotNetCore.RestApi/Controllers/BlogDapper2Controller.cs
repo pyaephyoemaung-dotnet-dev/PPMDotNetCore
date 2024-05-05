@@ -186,7 +186,7 @@ namespace PPMDotNetCore.RestApi.Controllers
 
             //using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
             //int result = db.Execute(query, new BlogsModel { BlogId = id });
-            int result = _dapperService.Execute(query, blogs);   // from dappeService
+            int result = _dapperService.Execute(query);   // from dappeService
 
             string message = result > 0 ? "Deleting success" : "deleting fail";
             return Ok(message);
