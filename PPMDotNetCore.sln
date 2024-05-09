@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.RestApi", "PPMDotNetCore.RestApi\PPMDotNetCore.RestApi.csproj", "{24BC6EAE-8CA6-462D-8576-D2516AD5AB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.Shared", "PPMDotNetCore.Shared\PPMDotNetCore.Shared.csproj", "{A2AADFC9-93A9-486F-ACCF-39DF0E651421}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.Shared", "PPMDotNetCore.Shared\PPMDotNetCore.Shared.csproj", "{A2AADFC9-93A9-486F-ACCF-39DF0E651421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.RestApiWithNLayer", "PPMDotNetCore.RestApiWithNLayer\PPMDotNetCore.RestApiWithNLayer.csproj", "{4559F854-3A61-48E7-BD1D-04F74A2E3163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{A2AADFC9-93A9-486F-ACCF-39DF0E651421}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2AADFC9-93A9-486F-ACCF-39DF0E651421}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2AADFC9-93A9-486F-ACCF-39DF0E651421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
