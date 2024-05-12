@@ -80,6 +80,11 @@ namespace PPMDotNetCore.Shared
             connection.Close();
             return result;
         }
+
+        public int Execute(string query, AdoDotNetParameter adoDotNetParameter1, AdoDotNetParameter adoDotNetParameter2, AdoDotNetParameter adoDotNetParameter3)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class AdoDotNetParameter
     {

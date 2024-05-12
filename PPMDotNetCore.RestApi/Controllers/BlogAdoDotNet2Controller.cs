@@ -87,7 +87,7 @@ namespace PPMDotNetCore.RestApi.Controllers
             //connection.Close();
             AdoDotNetParameter[] parameters = new AdoDotNetParameter[1];
             parameters[0] = new AdoDotNetParameter("@BlogId", id);
-            var item = adoDotNetService.QueryFirstOrDefault<BlogsModel>(query , parameters;  // from AdoDotNetService
+            var item = adoDotNetService.QueryFirstOrDefault<BlogsModel>(query , parameters);  // from AdoDotNetService
             if (item is null)
             {
                 return NotFound("No date dFound");
