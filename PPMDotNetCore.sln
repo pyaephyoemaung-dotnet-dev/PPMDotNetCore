@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.RestApi", "PP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.Shared", "PPMDotNetCore.Shared\PPMDotNetCore.Shared.csproj", "{A2AADFC9-93A9-486F-ACCF-39DF0E651421}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.RestApiWithNLayer", "PPMDotNetCore.RestApiWithNLayer\PPMDotNetCore.RestApiWithNLayer.csproj", "{4559F854-3A61-48E7-BD1D-04F74A2E3163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.RestApiWithNLayer", "PPMDotNetCore.RestApiWithNLayer\PPMDotNetCore.RestApiWithNLayer.csproj", "{4559F854-3A61-48E7-BD1D-04F74A2E3163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.ConsoleAppHttpClientExample", "PPMDotNetCore.ConsoleAppHttpClientExample\PPMDotNetCore.ConsoleAppHttpClientExample.csproj", "{7FE18D64-3F17-4E61-A038-B9DD9D9E8E9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4559F854-3A61-48E7-BD1D-04F74A2E3163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE18D64-3F17-4E61-A038-B9DD9D9E8E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE18D64-3F17-4E61-A038-B9DD9D9E8E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE18D64-3F17-4E61-A038-B9DD9D9E8E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE18D64-3F17-4E61-A038-B9DD9D9E8E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
