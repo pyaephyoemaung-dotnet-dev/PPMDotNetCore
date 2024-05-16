@@ -26,7 +26,18 @@ namespace PPMDotNetCore.PizzaApi.Features
             var lst = await _appContext.PizzaExtra.ToListAsync();
             return Ok(lst);
         }
-        [HttpPost]
+        [HttpGet("Order/{invoiceNo}")]
+        public async Task<IActionResult>GetAsync(string invoiceNo)
+        {
+            var item = await _appContext.PizzaOrders.FirstOrDefaultAsync(x => x.PizzaOrderInvoiceNo == invoiceNo);
+            var lst = await _appContext.PizzaOrderDetails.Where(x => x.PizzaOrderInvoiceNo == invoiceNo).ToListAsync();
+            return Ok(new
+            {
+                Order = item,
+                OrderDetail = lst
+            });
+        }
+        [HttpPost("Order")]
         public async Task<IActionResult> OrderRequestAsync(OrderRequest orderRequest)
         {
             var item = await _appContext.Pizza.FirstOrDefaultAsync(x => x.Id == orderRequest.PizzaId);

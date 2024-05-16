@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PPMDotNetCore.ConsoleApp.DtoBlogs;
 [Table("Tbl_Blog")]
-internal class BlogDto
+public class BlogDto
 {
     [Key]
     public int BlogId { get; set; }
