@@ -36,6 +36,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // txtTitle
@@ -107,11 +108,24 @@
             label3.TabIndex = 8;
             label3.Text = "Title :";
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.IndianRed;
+            btnUpdate.Location = new Point(170, 302);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "&Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Visible = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // formBlog
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnUpdate);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -137,5 +151,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button btnUpdate;
     }
 }
