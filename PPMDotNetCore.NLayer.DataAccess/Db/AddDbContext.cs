@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PPMDotNetCore.RestApiWithNLayer.Models;
+﻿
+using Microsoft.EntityFrameworkCore;
+using PPMDotNetCore.NLayer.DataAccess.Models;
 
-namespace PPMDotNetCore.RestApiWithNLayer.Db
+namespace PPMDotNetCore.NLayer.DataAccess.Db
 {
     public class AddDbContext : DbContext
     {

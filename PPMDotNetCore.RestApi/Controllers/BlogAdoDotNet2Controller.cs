@@ -14,11 +14,19 @@ namespace PPMDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogAdoDotNet2Controller : ControllerBase
     {
-        private readonly AdoDotNetService adoDotNetService = new AdoDotNetService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+        //private readonly AdoDotNetService adoDotNetService = new AdoDotNetService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+
+        private readonly AdoDotNetService adoDotNetService;
+
+        public BlogAdoDotNet2Controller(AdoDotNetService adoDotNetService)
+        {
+            this.adoDotNetService = adoDotNetService;
+        }
 
 
 
-                                            // Read
+
+        // Read
 
 
 

@@ -4,12 +4,16 @@ using PPMDotNetCore.RestApi.Models;
 
 namespace PPMDotNetCore.RestApi.Db
 {
-    internal class AddDbContext : DbContext
+    public class AddDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AddDbContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+        //}
         public DbSet<BlogsModel> Blogs { get; set; }
     }
 }

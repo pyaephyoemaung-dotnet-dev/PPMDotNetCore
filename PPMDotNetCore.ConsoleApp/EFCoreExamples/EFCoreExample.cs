@@ -9,9 +9,16 @@ using System.Threading.Tasks;
 
 namespace PPMDotNetCore.ConsoleApp.EFCoreExamples
 {
-    internal class EFCoreExample
+    public class EFCoreExample
     {
-        protected readonly AddDbContext adb = new AddDbContext();
+        // protected readonly AddDbContext adb = new AddDbContext();
+        private readonly AddDbContext adb;
+
+        public EFCoreExample(AddDbContext adb)
+        {
+            this.adb = adb;
+        }
+
         public void Run()
         {
             //Read();

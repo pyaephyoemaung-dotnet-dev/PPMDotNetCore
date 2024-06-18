@@ -9,16 +9,24 @@ using System.Reflection.Metadata;
 
 namespace PPMDotNetCore.ConsoleApp.AdoDotNetExample
 {
-    internal class AdoDotNetTuto
+    public class AdoDotNetTuto
     {
 
-        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //{
+        //    DataSource = "Pyae02",
+        //    InitialCatalog = "PPMDotNetCore",
+        //    UserID = "sa",
+        //    Password = "sasa@123"
+        //};
+
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public AdoDotNetTuto(SqlConnectionStringBuilder sqlConnectionStringBuilder)
         {
-            DataSource = "Pyae02",
-            InitialCatalog = "PPMDotNetCore",
-            UserID = "sa",
-            Password = "sasa@123"
-        };
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
+
         public void Read()
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);

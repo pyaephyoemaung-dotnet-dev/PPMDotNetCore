@@ -1,5 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PPMDotNetCore.ConsoleApp.AdoDotNetExample;
+using PPMDotNetCore.ConsoleApp.DapperExamples;
 using PPMDotNetCore.ConsoleApp.EFCoreExamples;
+using PPMDotNetCore.ConsoleApp.Services;
 using System.Data;
 using System.Data.SqlClient;
 //Console.WriteLine("Hello, World!");
@@ -44,6 +49,23 @@ adoDotNetTuto.Delete(3);*/
 //adoDotNetTuto.Edit(1002);
 //DapperExample dapper = new DapperExample();
 //dapper.Run();
-EFCoreExample eFCoreExample = new EFCoreExample();
-eFCoreExample.Run();
+//EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Run();
+var connectionString = ConnectionString.SqlConnectionStringBuilder.ConnectionString;
+var sqlConnectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
+var serverProvider = new ServiceCollection()
+    .AddScoped(n => new AdoDotNetTuto(sqlConnectionStringBuilder))
+    .AddScoped(n => new DapperExample(sqlConnectionStringBuilder))
+    .AddDbContext<AddDbContext>(opt =>
+    {
+        opt.UseSqlServer(connectionString);
+    })
+    .AddScoped<EFCoreExample>()
+    .BuildServiceProvider();
+var adoDotNetExample = serverProvider.GetRequiredService<AdoDotNetTuto>();
+adoDotNetExample.Read();
+
+var dapperExample = serverProvider.GetRequiredService<DapperExample>();
+dapperExample.Run();
+//AddDbContext db =  serverProvider.GetRequiredService<AddDbContext>();
 Console.ReadLine();

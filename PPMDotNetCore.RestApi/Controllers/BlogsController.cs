@@ -10,17 +10,25 @@ namespace PPMDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogsController : ControllerBase
     {
+        //private readonly AddDbContext _adb;
+
+        //public BlogsController()
+        //{
+        //    _adb = new AddDbContext();
+        //}
+
+
         private readonly AddDbContext _adb;
 
-        public BlogsController()
+        public BlogsController(AddDbContext adb)
         {
-            _adb = new AddDbContext();
+            _adb = adb;
         }
 
 
 
 
-                                                //Read Process
+        //Read Process
 
 
 

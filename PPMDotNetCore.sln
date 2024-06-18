@@ -26,7 +26,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.ConsoleAppRef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.WinFormsApp", "PPMDotNetCore.WinFormsApp\PPMDotNetCore.WinFormsApp.csproj", "{68E74B29-9621-442E-8208-361B0185908F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.WinFormsAppSqlInjection", "PPMDotNetCore.WinFormsAppSqlInjection\PPMDotNetCore.WinFormsAppSqlInjection.csproj", "{BB68E495-E7BC-467D-9009-B11B0F52B85F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.WinFormsAppSqlInjection", "PPMDotNetCore.WinFormsAppSqlInjection\PPMDotNetCore.WinFormsAppSqlInjection.csproj", "{BB68E495-E7BC-467D-9009-B11B0F52B85F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.NLayer.UI", "PPMDotNetCore.NLayer.UI\PPMDotNetCore.NLayer.UI.csproj", "{27CFEF9F-5751-4785-B860-99D3AA1AA87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.NLayer.BusinessLogic", "PPMDotNetCore.NLayer.BusinessLogic\PPMDotNetCore.NLayer.BusinessLogic.csproj", "{4E868DB0-37B3-45E5-B387-49C4E1865BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.NLayer.DataAccess", "PPMDotNetCore.NLayer.DataAccess\PPMDotNetCore.NLayer.DataAccess.csproj", "{65D57068-5EED-417C-9401-FAF339E994DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +80,18 @@ Global
 		{BB68E495-E7BC-467D-9009-B11B0F52B85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB68E495-E7BC-467D-9009-B11B0F52B85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB68E495-E7BC-467D-9009-B11B0F52B85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CFEF9F-5751-4785-B860-99D3AA1AA87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CFEF9F-5751-4785-B860-99D3AA1AA87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CFEF9F-5751-4785-B860-99D3AA1AA87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CFEF9F-5751-4785-B860-99D3AA1AA87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E868DB0-37B3-45E5-B387-49C4E1865BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E868DB0-37B3-45E5-B387-49C4E1865BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E868DB0-37B3-45E5-B387-49C4E1865BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E868DB0-37B3-45E5-B387-49C4E1865BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D57068-5EED-417C-9401-FAF339E994DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D57068-5EED-417C-9401-FAF339E994DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D57068-5EED-417C-9401-FAF339E994DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D57068-5EED-417C-9401-FAF339E994DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
