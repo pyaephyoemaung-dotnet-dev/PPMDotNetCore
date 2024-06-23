@@ -34,7 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.NLayer.Busine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.NLayer.DataAccess", "PPMDotNetCore.NLayer.DataAccess\PPMDotNetCore.NLayer.DataAccess.csproj", "{65D57068-5EED-417C-9401-FAF339E994DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.MinimalAPI", "PPMDotNetCore.MinimalAPI\PPMDotNetCore.MinimalAPI.csproj", "{8CF81BC5-CC0D-489A-8135-560CDA7A8D6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.MinimalAPI", "PPMDotNetCore.MinimalAPI\PPMDotNetCore.MinimalAPI.csproj", "{8CF81BC5-CC0D-489A-8135-560CDA7A8D6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.MVCApp", "PPMDotNetCore.MVCApp\PPMDotNetCore.MVCApp.csproj", "{8B8D346F-918C-41F6-8DC0-A82AF5B172F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,10 @@ Global
 		{8CF81BC5-CC0D-489A-8135-560CDA7A8D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF81BC5-CC0D-489A-8135-560CDA7A8D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF81BC5-CC0D-489A-8135-560CDA7A8D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8D346F-918C-41F6-8DC0-A82AF5B172F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8D346F-918C-41F6-8DC0-A82AF5B172F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8D346F-918C-41F6-8DC0-A82AF5B172F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8D346F-918C-41F6-8DC0-A82AF5B172F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
