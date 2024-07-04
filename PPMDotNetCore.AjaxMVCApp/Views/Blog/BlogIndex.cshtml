@@ -1,0 +1,67 @@
+﻿@model List<BlogsModel>
+@{
+    ViewData["Title"] = "Blog";
+    int count = 0;
+}
+
+<a href="/Blog/Create" class="btn btn-success">New</a>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <td>No.</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Content</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (BlogsModel item in Model)
+        {
+            <tr>
+                <td>@(++count)</td>
+                <td>@item.BlogTitle</td>
+                <td>@item.BlogAuthor</td>
+                <td>@item.BlogContent</td>
+                <td>
+                    <a class="btn btn-warning" href="/Blog/Edit/@item.BlogId">Edit</a>
+                    <button type="button" class="btn btn-danger btnDelete" data-id="@item.BlogId">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts {
+    <script>
+        $('.btnDelete').click(function () {
+            const isComfirm = comfirm("Are you sure want to delete?");
+            if (!isComfirm) return;
+            const id = $(this).data('id');
+            const _reqModel = {
+                BlogId : id
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '/Blog/Delete',
+                data: { blog: _reqModel }
+                                dataType: "json",
+                success: function (result) {
+                    // console.log(result);
+                    const message = result.Message;
+                    if (!result.IsSuccess) {
+                        alert(message);
+                        return;
+                    }
+                    alert(message);
+                    location.herf = "/Blog/Index";
+                },
+                error: function (xhr, status, error) {
+                    console.log({ xhr, status, error })
+                }
+            });
+        })
+    </script>
+}
