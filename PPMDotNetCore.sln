@@ -40,9 +40,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.MVCApp", "PPM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.AjaxMVCApp", "PPMDotNetCore.AjaxMVCApp\PPMDotNetCore.AjaxMVCApp.csproj", "{2DB683C4-7947-4238-8CAC-1FEA54BD6B4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.MVCChartApp", "PPMDotNetCore.MVCChartApp\PPMDotNetCore.MVCChartApp.csproj", "{3FC93527-196A-41A3-8FFC-31BED55A3ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.MVCChartApp", "PPMDotNetCore.MVCChartApp\PPMDotNetCore.MVCChartApp.csproj", "{3FC93527-196A-41A3-8FFC-31BED55A3ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.ConsoleAppLogging", "PPMDotNetCore.ConsoleAppLogging\PPMDotNetCore.ConsoleAppLogging.csproj", "{00B0C9E0-0076-4125-94B0-FBE374532CEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.ConsoleAppLogging", "PPMDotNetCore.ConsoleAppLogging\PPMDotNetCore.ConsoleAppLogging.csproj", "{00B0C9E0-0076-4125-94B0-FBE374532CEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.RealTimeChatApp", "PPMDotNetCore.RealTimeChatApp\PPMDotNetCore.RealTimeChatApp.csproj", "{3F954C59-FC00-4A77-9D1F-1F1C5553F577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +124,10 @@ Global
 		{00B0C9E0-0076-4125-94B0-FBE374532CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B0C9E0-0076-4125-94B0-FBE374532CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B0C9E0-0076-4125-94B0-FBE374532CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F954C59-FC00-4A77-9D1F-1F1C5553F577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F954C59-FC00-4A77-9D1F-1F1C5553F577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F954C59-FC00-4A77-9D1F-1F1C5553F577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F954C59-FC00-4A77-9D1F-1F1C5553F577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
