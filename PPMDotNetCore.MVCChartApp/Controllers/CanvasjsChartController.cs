@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PPMDotNetCore.MVCChartApp.Models;
 
 namespace PPMDotNetCore.MVCChartApp.Controllers
 {
@@ -18,6 +19,8 @@ namespace PPMDotNetCore.MVCChartApp.Controllers
         public IActionResult LineChart()
         {
             _logger.LogInformation("Line Chart ...");
+            CanvasJsLineChart model = new CanvasJsLineChart();
+            model.Series = new List<int> { };
             return View();
         }
     }
