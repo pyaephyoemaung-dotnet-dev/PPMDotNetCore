@@ -1,22 +1,18 @@
-﻿<div>
+﻿@model ChartJsRadarChartModel
+<div>
     <canvas id="myChart"></canvas>
 </div>
 
 @section scripts{
     <script>
+        const _lables = @Html.Raw(JsonConvert.SerializeObject(Model.Series));
+        const _dataOne = @JsonConvert.SerializeObject(Model.data1);
+        const _dataTwo = @JsonConvert.SerializeObject(Model.data2);
         const data = {
-            labels: [
-                'Eating',
-                'Drinking',
-                'Sleeping',
-                'Designing',
-                'Coding',
-                'Cycling',
-                'Running'
-            ],
+            labels: _lables,
             datasets: [{
                 label: 'My First Dataset',
-                data: [65, 59, 90, 81, 56, 55, 40],
+                data: _dataOne,
                 fill: true,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgb(255, 99, 132)',
@@ -26,7 +22,7 @@
                 pointHoverBorderColor: 'rgb(255, 99, 132)'
             }, {
                 label: 'My Second Dataset',
-                data: [28, 48, 40, 19, 96, 27, 100],
+                data: _dataTwo,
                 fill: true,
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgb(54, 162, 235)',
