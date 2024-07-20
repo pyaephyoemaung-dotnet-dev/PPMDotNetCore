@@ -1,0 +1,2 @@
+Scaffold-DbContext "Server=.;Database=PPMDotNetCore;User ID=sa;Password=sasa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir EFCoreDataModels -Context AppDbContext -Tables Tbl_Pizza
+dotnet ef dbcontext scaffold "Server=.;Database=PPMDotNetCore;User ID=sa;Password=sasa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o EFCoreDataModels -c AppDbContext -t Tbl_Pizza
