@@ -48,7 +48,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.RealTimeChatA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.EFCoreDbAuto", "PPMDotNetCore.EFCoreDbAuto\PPMDotNetCore.EFCoreDbAuto.csproj", "{385B9906-13EA-48D3-B79B-1F4F40B45E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.RealTimeChatAppWithUI", "PPMDotNetCore.RealTimeChatAppWithUI\PPMDotNetCore.RealTimeChatAppWithUI.csproj", "{7951886D-35F6-4748-AFF6-70E7B3593E13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.RealTimeChatAppWithUI", "PPMDotNetCore.RealTimeChatAppWithUI\PPMDotNetCore.RealTimeChatAppWithUI.csproj", "{7951886D-35F6-4748-AFF6-70E7B3593E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.Middleware", "PPMDotNetCore.Middleware\PPMDotNetCore.Middleware.csproj", "{C767E0B6-39B6-44AD-B03A-D81A07030E82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +142,10 @@ Global
 		{7951886D-35F6-4748-AFF6-70E7B3593E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7951886D-35F6-4748-AFF6-70E7B3593E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7951886D-35F6-4748-AFF6-70E7B3593E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C767E0B6-39B6-44AD-B03A-D81A07030E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C767E0B6-39B6-44AD-B03A-D81A07030E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C767E0B6-39B6-44AD-B03A-D81A07030E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C767E0B6-39B6-44AD-B03A-D81A07030E82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

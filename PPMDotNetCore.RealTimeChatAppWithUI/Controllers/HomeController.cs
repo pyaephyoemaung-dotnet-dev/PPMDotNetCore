@@ -22,6 +22,7 @@ namespace PPMDotNetCore.RealTimeChatAppWithUI.Controllers
             return View();
         }
         [HttpPost]
+        
         public async Task<IActionResult> IndexAsync(DataRequestModel dataRequestModel)
         {
             await _hubContext.Clients.All.SendAsync("ClientReceiveMessage", dataRequestModel.Data);
