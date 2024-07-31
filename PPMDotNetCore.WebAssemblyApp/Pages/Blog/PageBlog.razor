@@ -1,0 +1,91 @@
+﻿<PageTitle>Blog</PageTitle>
+
+<span>Count : @Blogs.Count</span>
+<div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" @bind-value="requestModel.BlogTitle" />
+</div>
+<div class="mb-3">
+    <label class="form-label">Author</label>
+    <input type="text" class="form-control" @bind-value="requestModel.BlogAuthor">
+</div>
+<div class="mb-3">
+    <label class="form-label">Content</label>
+    <input type="text" class="form-control" @bind-value="requestModel.BlogContent">
+</div>
+@if(requsetModel.BlogId is null)
+{
+    <button type="button" class="btn btn-success" @onclick="Save">Save</button>
+}else{
+    <button type="button" class="btn btn-success" @onclick="Update">Update</button>
+}
+<button type="button" class="btn btn-dark" @onclick="Cancel">Cancel</button>
+
+@if(Blogs is not null){
+    int count = 0;
+    <table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>No</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Blogs)
+        {
+            <tr>
+                    <td>
+                        <button type="button" class="btn btn-warning" @onclick="() => Edit(item.BlogId)">Edit</button>
+                        <button type="button" class="btn btn-danger" @onclick="() => Delete(item.BlogId)">Delete</button>
+                    </td>
+                <td>@(++count)</td>
+                <td>@item.BlogId</td>
+                <td>@item.BlogTitle</td>
+                <td>@item.BlogAuthor</td>
+                <td>@item.BlogContent</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    @code {
+    private List<BlogsModel> Blogs = new List<BlogsModel>();
+    private BlogsModel requsetModel = new();
+    private void Cancel()
+    {
+
+    }
+    private void Save()
+    {
+        requsetModel.BlogId = Giid.NewGuid().ToString();
+        Blogs.Add(requsetModel);
+        requsetModel = new();
+    }
+    private void Edit(string id)
+    {
+        var item = Blogs.FirstOrDefault(x => x.BlogId == id);
+        if (item is null) return;
+        requsetModel.BlogId = item.BlogId;
+        requsetModel.BlogTitle = item.BlogTitle;
+        requsetModel.BlogAuthor = item.BlogAuthor;
+        requsetModel.BlogContent = item.BlogContent;
+        requsetModel = new();
+    }
+    private void Update(string id)
+    {
+        int index = Blogs.FirstOrDefault(x => x.BlogId == requsetModel.BlogId);
+        if (index == -1) return;
+        Blogs[index] = requsetModel;
+        requsetModel = new();
+    }
+    privare void Delete(sting id)
+    {
+        int item = Blogs.FirstOrDefault(x => x.BlogId == requsetModel.BlogId);
+        if (item == -1) return;
+        Blogs.RemoveAt(item);
+        requsetModel = new();
+    }
+}

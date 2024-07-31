@@ -54,7 +54,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.Middleware", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.BlazorCRUDApp", "PPMDotNetCore.BlazorCRUDApp\PPMDotNetCore.BlazorCRUDApp.csproj", "{0FF3B2FF-1E4A-42D7-834D-EA151FCF7F35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.LoginMiddleware", "PPMDotNetCore.LoginMiddleware\PPMDotNetCore.LoginMiddleware.csproj", "{9B30B2AF-C22F-4819-B658-BEB66A2BC8F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.LoginMiddleware", "PPMDotNetCore.LoginMiddleware\PPMDotNetCore.LoginMiddleware.csproj", "{9B30B2AF-C22F-4819-B658-BEB66A2BC8F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.WebAssemblyApp", "PPMDotNetCore.WebAssemblyApp\PPMDotNetCore.WebAssemblyApp.csproj", "{BDBCBCC3-F765-4A17-9BBF-F9BF29F3DEE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +160,10 @@ Global
 		{9B30B2AF-C22F-4819-B658-BEB66A2BC8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B30B2AF-C22F-4819-B658-BEB66A2BC8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B30B2AF-C22F-4819-B658-BEB66A2BC8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDBCBCC3-F765-4A17-9BBF-F9BF29F3DEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDBCBCC3-F765-4A17-9BBF-F9BF29F3DEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDBCBCC3-F765-4A17-9BBF-F9BF29F3DEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDBCBCC3-F765-4A17-9BBF-F9BF29F3DEE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
