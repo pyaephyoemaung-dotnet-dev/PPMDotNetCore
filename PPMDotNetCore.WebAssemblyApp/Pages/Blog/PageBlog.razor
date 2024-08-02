@@ -3,15 +3,15 @@
 <span>Count : @Blogs.Count</span>
 <div class="mb-3">
     <label class="form-label">Title</label>
-    <input type="text" class="form-control" @bind-value="requestModel.BlogTitle" />
+    <input type="text" class="form-control" @bind-value="requsetModel.BlogTitle" />
 </div>
 <div class="mb-3">
     <label class="form-label">Author</label>
-    <input type="text" class="form-control" @bind-value="requestModel.BlogAuthor">
+    <input type="text" class="form-control" @bind-value="requsetModel.BlogAuthor">
 </div>
 <div class="mb-3">
     <label class="form-label">Content</label>
-    <input type="text" class="form-control" @bind-value="requestModel.BlogContent">
+    <input type="text" class="form-control" @bind-value="requsetModel.BlogContent">
 </div>
 @if(requsetModel.BlogId is null)
 {
@@ -51,6 +51,7 @@
         }
     </tbody>
 </table>
+}
     @code {
     private List<BlogsModel> Blogs = new List<BlogsModel>();
     private BlogsModel requsetModel = new();
@@ -60,7 +61,7 @@
     }
     private void Save()
     {
-        requsetModel.BlogId = Giid.NewGuid().ToString();
+        requsetModel.BlogId = Guid.NewGuid().ToString();
         Blogs.Add(requsetModel);
         requsetModel = new();
     }
@@ -74,18 +75,19 @@
         requsetModel.BlogContent = item.BlogContent;
         requsetModel = new();
     }
-    private void Update(string id)
+    private void Update()
     {
-        int index = Blogs.FirstOrDefault(x => x.BlogId == requsetModel.BlogId);
+        int index = Blogs.FindIndex(x => x.BlogId == requsetModel.BlogId);
         if (index == -1) return;
         Blogs[index] = requsetModel;
         requsetModel = new();
     }
-    privare void Delete(sting id)
+    private void Delete(string id)
     {
-        int item = Blogs.FirstOrDefault(x => x.BlogId == requsetModel.BlogId);
+        int item = Blogs.FindIndex(x => x.BlogId == requsetModel.BlogId);
         if (item == -1) return;
         Blogs.RemoveAt(item);
         requsetModel = new();
     }
 }
+
