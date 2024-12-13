@@ -17,7 +17,7 @@ namespace DotNetRevision
             //Edit(1);
             //Edit(22);
             //Update(13 ,"Test 3","Test 3","Test 3");
-            Delete(13);
+            //Delete(13);
         }
         private void Read()
         {
