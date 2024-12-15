@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DotNetStudy.Dtos;
+using DotNetStudy.Services;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetStudy
+namespace DotNetStudy.EFCoreExamples
 {
     internal class AppDbContext : DbContext
     {
@@ -14,6 +16,6 @@ namespace DotNetStudy
         {
             optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         }
-        public DbSet<BlogDto>Blogs { get; set; }
+        public DbSet<BlogDto> Blogs { get; set; }
     }
 }

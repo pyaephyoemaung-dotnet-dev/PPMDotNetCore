@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetStudy
+namespace DotNetStudy.Services
 {
     internal class ConnectionString
     {
