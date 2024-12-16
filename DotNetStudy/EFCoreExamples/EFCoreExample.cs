@@ -15,7 +15,7 @@ namespace DotNetStudy.EFCoreExamples
             //Read();
             //Update(1,".net", "Pyae", ".net");
             //Edit(1);
-            Delete(14);
+            //Delete(14);
         }
         private void Read()
         {
