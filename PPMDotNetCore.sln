@@ -62,7 +62,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetRevision", "DotNetRev
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetStudy", "DotNetStudy\DotNetStudy.csproj", "{2CC6B2C4-0E38-4010-B08F-E532F87E6834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NetCore.RestApiTest", "ASP.NetCore.RestApiTest\ASP.NetCore.RestApiTest.csproj", "{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NetCore.RestApiTest", "ASP.NetCore.RestApiTest\ASP.NetCore.RestApiTest.csproj", "{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.SchoolTeach", "ConsoleApp.SchoolTeach\ConsoleApp.SchoolTeach.csproj", "{132A1A56-F3B1-4A54-B604-D053894C307C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +184,10 @@ Global
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132A1A56-F3B1-4A54-B604-D053894C307C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132A1A56-F3B1-4A54-B604-D053894C307C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132A1A56-F3B1-4A54-B604-D053894C307C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132A1A56-F3B1-4A54-B604-D053894C307C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
