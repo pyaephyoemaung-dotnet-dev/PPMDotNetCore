@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace WebApplication.N_Layer
+namespace NLayerTesting
 {
     public class ConnectingString
     {

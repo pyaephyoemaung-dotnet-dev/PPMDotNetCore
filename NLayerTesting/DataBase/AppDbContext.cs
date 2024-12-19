@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication.N_Layer.Model;
+using NLayerTesting;
+using NLayerTesting.Model;
 
-namespace WebApplication.N_Layer.DataBase
+namespace NLayerTesting.DataBase
 {
     public class AppDbContext : DbContext
     {

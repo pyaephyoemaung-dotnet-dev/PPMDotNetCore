@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication.N_Layer.Model
+namespace NLayerTesting.Model
 {
     [Table("tbl_blog")]
     public class BlogModels
