@@ -30,7 +30,7 @@ namespace PPMDotNetCore.RestApiWithNLayer.Feature.Blog
         public BlogsModel GetBlog(int id)
         {
             var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
-            return item;
+            return item!;
         }
         
 
