@@ -70,7 +70,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.N-Layer", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerTesting", "NLayerTesting\NLayerTesting.csproj", "{5056DFA9-0DE1-4323-A87A-65F779F24DE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.LatHtaikBayDinApi", "PPMDotNetCore.LatHtaikBayDinApi\PPMDotNetCore.LatHtaikBayDinApi.csproj", "{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.LatHtaikBayDinApi", "PPMDotNetCore.LatHtaikBayDinApi\PPMDotNetCore.LatHtaikBayDinApi.csproj", "{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.ConsoleAppHttpClientExample", "DotNetCore.ConsoleAppHttpClientExample\DotNetCore.ConsoleAppHttpClientExample.csproj", "{C0ECF027-F0E5-4886-BF9C-52974BEF4256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -206,6 +208,10 @@ Global
 		{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
