@@ -97,7 +97,7 @@ namespace PPMDotNetCore.ConsoleAppRestClientExample
         private async Task DeleteAsync(int id)
         {
 
-            RestRequest restRequest = new RestRequest($"{_blogEndPoint}/{id}");
+            RestRequest restRequest = new RestRequest($"{_blogEndPoint}/{id}",Method.Get);
             var response = await _client.GetAsync(restRequest);
             if (response.IsSuccessStatusCode)
             {

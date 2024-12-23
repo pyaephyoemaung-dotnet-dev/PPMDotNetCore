@@ -72,7 +72,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerTesting", "NLayerTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.LatHtaikBayDinApi", "PPMDotNetCore.LatHtaikBayDinApi\PPMDotNetCore.LatHtaikBayDinApi.csproj", "{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.ConsoleAppHttpClientExample", "DotNetCore.ConsoleAppHttpClientExample\DotNetCore.ConsoleAppHttpClientExample.csproj", "{C0ECF027-F0E5-4886-BF9C-52974BEF4256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.ConsoleAppHttpClientExample", "DotNetCore.ConsoleAppHttpClientExample\DotNetCore.ConsoleAppHttpClientExample.csproj", "{C0ECF027-F0E5-4886-BF9C-52974BEF4256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClientExample", "RestClientExample\RestClientExample.csproj", "{0F9AF5F1-EE9B-4393-B710-FD2CAC39974B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -212,6 +214,10 @@ Global
 		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0ECF027-F0E5-4886-BF9C-52974BEF4256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9AF5F1-EE9B-4393-B710-FD2CAC39974B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9AF5F1-EE9B-4393-B710-FD2CAC39974B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9AF5F1-EE9B-4393-B710-FD2CAC39974B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9AF5F1-EE9B-4393-B710-FD2CAC39974B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
