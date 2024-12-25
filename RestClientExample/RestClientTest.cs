@@ -14,7 +14,8 @@ namespace RestClientExample
         private readonly string _endPoint = "apl/blogs";
         public async Task RunAsync()
         {
-            await ReadAsync();
+            //await ReadAsync();
+            await CreateAsync("1", "2", "3");
         }
         private async Task ReadAsync()
         {
