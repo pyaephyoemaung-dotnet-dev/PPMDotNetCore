@@ -68,7 +68,7 @@ namespace PPMDotNetCore.PizzaApi.Features
                 message = "Thank ykou your order!!",
                 TotalAmount = pizzaPrice
             };
-            return Ok(orderRequest);
+            return Ok(orderMessage);
         }
     }
 }
