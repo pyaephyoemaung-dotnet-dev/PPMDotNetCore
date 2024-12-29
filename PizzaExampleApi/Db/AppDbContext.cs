@@ -61,4 +61,26 @@ namespace PizzaExampleApi.Db
         public string InvoiceNo { get; set; }
         public decimal TotalAmount { get; set; }
     }
+    public class PizzaOrderHeadModel
+    {
+        public int PizzaOrderId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaId { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string PizzaName { get; set; }
+        public decimal PizzaPrice { get; set; }
+    }
+    public class PizzaDetailHeadModel 
+    {
+        public int PizzaOrderDetailId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaExtraId { get; set; }
+        public string PizzaExtraName { get; set; }
+        public decimal PizzaPrice { get; set; }
+    }
+    public class PizzaInvoiceModel
+    {
+        public PizzaOrderHeadModel Order { get; set; }
+        public List<PizzaDetailHeadModel> OrderDetail { get; set; }
+    }
 }

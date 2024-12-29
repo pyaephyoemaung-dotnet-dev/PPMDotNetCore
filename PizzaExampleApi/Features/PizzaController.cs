@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PizzaExampleApi.Db;
+using PizzaExampleApi.PizzaQueries;
+using PPMDotNetCore.Shared;
 
 namespace PizzaExampleApi.Features
 {
@@ -10,9 +11,11 @@ namespace PizzaExampleApi.Features
     public class PizzaController : ControllerBase
     {
         private readonly AppDbContext _db;
+        private readonly DapperService _dapperService;
         public PizzaController()
         {
             _db = new AppDbContext();
+            _dapperService = new DapperService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         }
         [HttpGet]
         public async Task<IActionResult> GetPizzasAsync()
@@ -35,7 +38,7 @@ namespace PizzaExampleApi.Features
             return Ok(result);
         }
         [HttpPost("AddExtraPizza")]
-        public async Task<IActionResult>AddExtraPizza(PizzaExtraModel pizzaExtra)
+        public async Task<IActionResult> AddExtraPizza(PizzaExtraModel pizzaExtra)
         {
             await _db.PizzaExtra.AddAsync(pizzaExtra);
             await _db.SaveChangesAsync();
@@ -43,7 +46,7 @@ namespace PizzaExampleApi.Features
             return Ok("Pizza Adding Succeful.");
         }
         [HttpPost("OrderRequest")]
-        public async Task<IActionResult>OrderRequestAsync(OrderRequest order)
+        public async Task<IActionResult> OrderRequestAsync(OrderRequest order)
         {
             var item = await _db.Pizza.FirstOrDefaultAsync(x => x.PizzaId == order.PizzaId);
             var pizzaPrice = item.PizzaPrice;
@@ -76,11 +79,31 @@ namespace PizzaExampleApi.Features
             return Ok(Message);
         }
         [HttpGet("Order/{invoiceNo}")]
-        public async Task<IActionResult>GetDetailOrderAsync(string invoiceNo)
+        public async Task<IActionResult> GetDetailOrderAsync(string invoiceNo)
         {
             var item = await _db.PizzaOrder.FirstOrDefaultAsync(x => x.PizzaOrderInvoiceNo == invoiceNo);
             if (item is null) return NotFound("No Pizza Found.");
             return Ok(item);
+        }
+        [HttpGet("DetailOrder/{invoiceNo}")]
+        public IActionResult GetOrderDetail(string invoiceNo)
+        {
+            var item = _dapperService.QueryFirstOrDefault<PizzaOrderHeadModel>
+                (
+                    Queries.PizzaOrderQuery,
+                    new { PizzaOrderInvoiceNo = invoiceNo }
+                );
+            var lst = _dapperService.Query<PizzaDetailHeadModel>
+                (
+                    Queries.PizzaOrderDetailQuery,
+                    new { PizzaOrderInvoiceNo = invoiceNo }
+                );
+            var model = new PizzaInvoiceModel
+            {
+                Order = item,
+                OrderDetail = lst
+            };
+            return Ok(model);
         }
     }
 }
