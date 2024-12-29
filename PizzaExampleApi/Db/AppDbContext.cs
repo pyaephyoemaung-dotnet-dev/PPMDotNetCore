@@ -14,6 +14,8 @@ namespace PizzaExampleApi.Db
         }
         public DbSet<PizzaModel> Pizza { get; set; }
         public DbSet<PizzaExtraModel> PizzaExtra { get; set; }
+        public DbSet<PizzaOrderModel> PizzaOrder { get; set; }
+        public DbSet<PizzaOrderDetailModel> PizzaDetail { get; set; }
     }
     [Table("tbl_Pizza")]
     public class PizzaModel
@@ -35,5 +37,28 @@ namespace PizzaExampleApi.Db
     {
         public int PizzaId { get; set; }
         public int[] Extra { get; set; }
+    }
+    [Table("tbl_PizzaOrder")]
+    public class PizzaOrderModel
+    {
+        [Key]
+        public int PizzaOrderId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaId { get; set; }
+        public decimal TotalAmount { get; set; }
+    }
+    [Table("tbl_PizzaDetail")]
+    public class PizzaOrderDetailModel
+    {
+        [Key]
+        public int PizzaOrderDetailId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaExtraId { get; set; }
+    }
+    public class OrderMessage
+    {
+        public string message { get; set; }
+        public string InvoiceNo { get; set; }
+        public decimal TotalAmount { get; set; }
     }
 }

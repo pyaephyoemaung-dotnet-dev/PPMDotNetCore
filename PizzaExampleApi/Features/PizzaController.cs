@@ -52,6 +52,35 @@ namespace PizzaExampleApi.Features
                 var lstExtra = await _db.PizzaExtra.Where(x => order.Extra.Contains(x.PizzaExtraId)).ToListAsync();
                 pizzaPrice += lstExtra.Sum(x => x.PizzaPrice);
             }
+            var invoiceNo = DateTime.Now.ToString("yyyyMMddHHmmss");
+            PizzaOrderModel Order = new PizzaOrderModel
+            {
+                PizzaId = order.PizzaId,
+                PizzaOrderInvoiceNo = invoiceNo,
+                TotalAmount = pizzaPrice
+            };
+            List<PizzaOrderDetailModel> detail = order.Extra.Select(x => new PizzaOrderDetailModel
+            {
+                PizzaExtraId = x,
+                PizzaOrderInvoiceNo = invoiceNo
+            }).ToList();
+            await _db.PizzaOrder.AddAsync(Order);
+            await _db.PizzaDetail.AddRangeAsync(detail);
+            await _db.SaveChangesAsync();
+            OrderMessage Message = new OrderMessage
+            {
+                message = "Thank you for choosing our pizzas",
+                InvoiceNo = invoiceNo,
+                TotalAmount = pizzaPrice
+            };
+            return Ok(Message);
+        }
+        [HttpGet("Order/{invoiceNo}")]
+        public async Task<IActionResult>GetDetailOrderAsync(string invoiceNo)
+        {
+            var item = await _db.PizzaOrder.FirstOrDefaultAsync(x => x.PizzaOrderInvoiceNo == invoiceNo);
+            if (item is null) return NotFound("No Pizza Found.");
+            return Ok(item);
         }
     }
 }
