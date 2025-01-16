@@ -28,5 +28,10 @@ namespace PPMDotNetCore.WinFormsApp
             formBlog blog = new formBlog();
             blog.ShowDialog();
         }
+
+        private void blogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

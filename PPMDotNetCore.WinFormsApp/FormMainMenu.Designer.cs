@@ -51,6 +51,7 @@
             blogToolStripMenuItem.Name = "blogToolStripMenuItem";
             blogToolStripMenuItem.Size = new Size(54, 24);
             blogToolStripMenuItem.Text = "Blog";
+            blogToolStripMenuItem.Click += blogToolStripMenuItem_Click;
             // 
             // newBlogToolStripMenuItem
             // 
