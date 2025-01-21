@@ -1,0 +1,50 @@
+﻿@page "/blog"
+@using Newtonsoft.Json
+@inject HttpClient httpClient
+
+<h3>BlogList</h3>
+<PageTitle>Blog List</PageTitle>
+<a href="/blog/create" class="btn btn-success">New</a>
+@if(_blogs is not null)
+{
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <td>No.</td>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Content</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in _blogs)
+            {
+                <tr>
+                    <td>@item.BlogId</td>
+                    <td>@item.BlogTitle</td>
+                    <td>@item.BlogAuthor</td>
+                    <td>@item.BlogContent</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    protected override async Task OnInitializedAsync()
+    { 
+        var response = await httpClient.GetAsync("api/Blogs");
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadAsStringAsync();
+            _blogs = JsonConvert.DeserializeObject<List<BlogModels>>(result)!;
+        }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+        }
+    }
+    private List<BlogModels>? _blogs = null;
+}

@@ -64,8 +64,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetStudy", "DotNetStudy\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NetCore.RestApiTest", "ASP.NetCore.RestApiTest\ASP.NetCore.RestApiTest.csproj", "{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.SchoolTeach", "ConsoleApp.SchoolTeach\ConsoleApp.SchoolTeach.csproj", "{132A1A56-F3B1-4A54-B604-D053894C307C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerTesting", "NLayerTesting\NLayerTesting.csproj", "{5056DFA9-0DE1-4323-A87A-65F779F24DE9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.LatHtaikBayDinApi", "PPMDotNetCore.LatHtaikBayDinApi\PPMDotNetCore.LatHtaikBayDinApi.csproj", "{46CFE868-7E4F-4CAC-BA35-0529EFDA23A2}"
@@ -80,7 +78,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefitExampleConsoleApp", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.RefitExample", "ConsoleApp.RefitExample\ConsoleApp.RefitExample.csproj", "{69457979-3A31-46D9-B815-31DF67E352A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPMDotNetCore.ModelViewControllerApp", "PPMDotNetCore.ModelViewControllerApp\PPMDotNetCore.ModelViewControllerApp.csproj", "{1FC2B6B4-F52A-48E4-B619-4404C8EC99D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPMDotNetCore.ModelViewControllerApp", "PPMDotNetCore.ModelViewControllerApp\PPMDotNetCore.ModelViewControllerApp.csproj", "{1FC2B6B4-F52A-48E4-B619-4404C8EC99D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{A3ADFA02-3383-4B72-8DB6-90D5298C1326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -200,10 +200,6 @@ Global
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F8DB18-4F88-47A4-B46F-867EC5F28D4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{132A1A56-F3B1-4A54-B604-D053894C307C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{132A1A56-F3B1-4A54-B604-D053894C307C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{132A1A56-F3B1-4A54-B604-D053894C307C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{132A1A56-F3B1-4A54-B604-D053894C307C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5056DFA9-0DE1-4323-A87A-65F779F24DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5056DFA9-0DE1-4323-A87A-65F779F24DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5056DFA9-0DE1-4323-A87A-65F779F24DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -236,6 +232,10 @@ Global
 		{1FC2B6B4-F52A-48E4-B619-4404C8EC99D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC2B6B4-F52A-48E4-B619-4404C8EC99D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FC2B6B4-F52A-48E4-B619-4404C8EC99D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3ADFA02-3383-4B72-8DB6-90D5298C1326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3ADFA02-3383-4B72-8DB6-90D5298C1326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3ADFA02-3383-4B72-8DB6-90D5298C1326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3ADFA02-3383-4B72-8DB6-90D5298C1326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

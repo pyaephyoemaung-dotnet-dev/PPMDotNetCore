@@ -9,7 +9,7 @@ using System.Reflection.Metadata;
 
 namespace DotNetRevision
 {
-    internal class AdoDotNetSample
+    public class AdoDotNetSample
     {
         public readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {

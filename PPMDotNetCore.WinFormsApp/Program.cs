@@ -12,7 +12,7 @@ namespace PPMDotNetCore.WinFormsApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new formBlog());
-            Application.Run(new Assi());
+            Application.Run(new stud());
         }
     }
 }

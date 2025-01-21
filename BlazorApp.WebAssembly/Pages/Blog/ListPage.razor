@@ -1,0 +1,22 @@
+﻿@page "/list"
+@inject HttpClient httpClient
+<h3>ListPage</h3>
+<PageTitle>Blog List</PageTitle>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await httpClient.GetAsync("api/Blogs");
+        if (response.IsSuccessStatusCode)
+        {
+            var jsonStr = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(jsonStr);
+        }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            
+        }
+    }
+}
