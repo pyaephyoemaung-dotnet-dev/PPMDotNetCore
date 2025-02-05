@@ -1,4 +1,4 @@
-namespace PPMDotNetCore.WinFormsApp
+namespace WinFormsApp1
 {
     internal static class Program
     {
@@ -11,8 +11,7 @@ namespace PPMDotNetCore.WinFormsApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new formBlog());
-            Application.Run(new StudentForm());
+            Application.Run(new Form1());
         }
     }
 }
